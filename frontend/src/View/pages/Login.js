@@ -1,23 +1,22 @@
 import React from 'react';
-import { Grid, ListItem, List } from '@material-ui/core';
-import { Recipe } from '../components';
+import { Link } from 'react-router-dom';
+import { Grid, ListItem } from '@material-ui/core';
+import { Login_Form } from '../components';
+import './pages.css';
 
 const Login = () => {
   return (
-    <Grid container clssName='login_form'>
-      <Grid item xs={12} id='lo'>
-        아이디 : 
-      </Grid>
-      <Grid item xs={12} id='lo'>
-        비밀번호 : 
-      </Grid>
-      <Grid item xs={12} id='lo'>
-        로그인
-      </Grid>
-      <Grid item xs={12} id='lo'>
-        회원가입
-      </Grid>
+    <Grid container className='login_form'>
+      <Login_Form></Login_Form>
+      <ListItem className='Sign'>
+        <Grid className='Sign_button'>
+          <Link to={'/Sign_Up_P'}>
+              회원가입
+          </Link>
+          </Grid>
+      </ListItem>
     </Grid>
+    
   )
 }
 
